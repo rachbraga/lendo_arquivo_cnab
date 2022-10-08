@@ -14,7 +14,7 @@ class transaction(models.TextChoices):
     DEFAULT = "Nada"
 
 
-class Document(models.Model):
+class Dados(models.Model):
     tipo = models.CharField(max_length=2)
     data = models.CharField(max_length=8)
     valor = models.CharField(max_length=10)
