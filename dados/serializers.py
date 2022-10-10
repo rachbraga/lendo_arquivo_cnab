@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Dados
+from dados.models import Dados
 
 
 class DadosSerializers(serializers.ModelSerializer):
@@ -19,5 +19,5 @@ class DadosSerializers(serializers.ModelSerializer):
         ]
 
     def create(self, validated_data):
-        print(validated_data)
+
         return Dados.objects.create(**validated_data)
