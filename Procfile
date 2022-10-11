@@ -1,2 +1,1 @@
-release: python manage.py migrate
-web: gunicorn read_cnab.wsgi
+web: gunicorn cnab_txt.wsgi --log-level debug
