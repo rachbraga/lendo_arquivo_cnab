@@ -1,1 +1,3 @@
-web: gunicorn cnab_txt.wsgi --log-level debug
+web: gunicorn read-cnab-rach.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
