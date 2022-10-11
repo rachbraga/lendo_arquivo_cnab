@@ -72,28 +72,6 @@ class FileUploadView(APIView):
 
             else:
                 menos -= int(item.valor) / 100.00
-        ##FUTURAMENTE SEPARAR POR SESSÕES:
-        # if loja["tipo"] == "1":
-        #     debito += [loja["valor"]]
-        #     lista_lojas_debito = lista_lojas_debito + [loja]
-        # if loja["tipo"] == "2":
-        #     lista_lojas_boleto = lista_lojas_boleto + [loja]
-        # if loja["tipo"] == "3":
-        #     lista_lojas_financiamento = lista_lojas_financiamento + [loja]
-        # if loja["tipo"] == "4":
-        #     lista_lojas_credito = lista_lojas_credito + [loja]
-        # if loja["tipo"] == "5":
-        #     lista_lojas_re = lista_lojas_re + [loja]
-        # if loja["tipo"] == "6":
-        #     lista_lojas_vendas = lista_lojas_vendas + [loja]
-        # if loja["tipo"] == "7":
-        #     lista_lojas_rt = lista_lojas_rt + [loja]
-        # if loja["tipo"] == "8":
-        #     lista_lojas_rd = lista_lojas_rd + [loja]
-        # if loja["tipo"] == "9":
-        #     lista_lojas_aluguel = lista_lojas_aluguel + [loja]
-
-        #
 
         saldo_em_conta = soma + menos
         return Response({"Transações": lista_lojas, "SALDO EM CONTA": saldo_em_conta})
