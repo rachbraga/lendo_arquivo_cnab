@@ -1,1 +1,2 @@
-web: gunicorn read-cnab-rach.wsgi
+release: python manage.py migrate
+web: gunicorn read_cnab.wsgi
